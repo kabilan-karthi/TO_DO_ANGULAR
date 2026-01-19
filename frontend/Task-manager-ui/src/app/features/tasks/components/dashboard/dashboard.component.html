@@ -1,0 +1,47 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+
+  <!-- Total -->
+  <div
+    class="rounded-2xl p-6 shadow-lg bg-gradient-to-br from-slate-100 to-slate-200
+           transition transform hover:scale-105"
+  >
+    <p class="text-sm font-semibold text-slate-600">Total Tasks</p>
+    <p class="text-4xl font-extrabold text-slate-900 mt-2">
+      {{ total }}
+    </p>
+  </div>
+
+  <!-- To Do -->
+  <div
+    class="rounded-2xl p-6 shadow-lg bg-gradient-to-br from-yellow-100 to-yellow-200
+           transition transform hover:scale-105"
+  >
+    <p class="text-sm font-semibold text-yellow-800">To Do</p>
+    <p class="text-4xl font-extrabold text-yellow-900 mt-2">
+      {{ todo }}
+    </p>
+  </div>
+
+  <!-- In Progress -->
+  <div
+    class="rounded-2xl p-6 shadow-lg bg-gradient-to-br from-blue-100 to-blue-200
+           transition transform hover:scale-105"
+  >
+    <p class="text-sm font-semibold text-blue-800">In Progress</p>
+    <p class="text-4xl font-extrabold text-blue-900 mt-2">
+      {{ inProgress }}
+    </p>
+  </div>
+
+  <!-- Done -->
+  <div
+    class="rounded-2xl p-6 shadow-lg bg-gradient-to-br from-green-100 to-green-200
+           transition transform hover:scale-105"
+  >
+    <p class="text-sm font-semibold text-green-800">Completed</p>
+    <p class="text-4xl font-extrabold text-green-900 mt-2">
+      {{ done }}
+    </p>
+  </div>
+
+</div>
