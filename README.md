@@ -96,9 +96,13 @@ ng serve --proxy-config proxy.conf.json
 * **Overdue Tracking:** Automatic highlighting of tasks past their due date.
 
 ## TASK MANAGER DASHBOARD
-![Create Task]{<img width="1380" height="851" alt="image" src="https://github.com/user-attachments/assets/ff8ede56-0724-4c09-a025-833be0542922" />
-}
-![Status Dashboard]{<img width="1298" height="890" alt="image" src="https://github.com/user-attachments/assets/218070ca-359d-4aba-ac84-7457e6221ffc" />
-}
-![Swagger API check]{<img width="1809" height="718" alt="image" src="https://github.com/user-attachments/assets/64624559-1396-4e53-a792-3937d79ba8dd" />
-}
+*CREATE TASK*
+<img width="1380" height="851" alt="image" src="https://github.com/user-attachments/assets/ff8ede56-0724-4c09-a025-833be0542922" />
+---
+*STATUS DASHBOARD*
+<img width="1298" height="890" alt="image" src="https://github.com/user-attachments/assets/218070ca-359d-4aba-ac84-7457e6221ffc" />
+---
+*SWAGGER API CHECKPOINTS*
+<img width="1809" height="718" alt="image" src="https://github.com/user-attachments/assets/64624559-1396-4e53-a792-3937d79ba8dd" />
+---
+
