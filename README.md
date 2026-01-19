@@ -1,187 +1,165 @@
-📝 Task Manager Application
+# 📝 Task Manager App
 
-A full-stack Task Manager application built using Angular, ASP.NET Core Web API, and MongoDB, following clean architecture, RESTful API design, and SOLID principles.
+A full-stack **Task Manager application** built using **Angular**, **ASP.NET Core Web API**, and **MongoDB**, following **RESTful API design**, **clean architecture**, and **SOLID principles**.
 
-This project was built to understand frontend–backend–database integration, real-world API flow, and modern web development practices.
+---
 
-🚀 Tech Stack
-Frontend
+## 🚀 Tech Stack
 
-Angular (Standalone Components)
+**Frontend**
+- Angular (Standalone Components)
+- TypeScript
+- Tailwind CSS
+- RxJS
 
-TypeScript
+**Backend**
+- ASP.NET Core Web API (.NET 7+)
+- RESTful APIs
+- Dependency Injection
+- MongoDB.Driver
 
-Tailwind CSS
+**Database**
+- MongoDB (Local / Atlas)
 
-RxJS
+---
 
-Angular HttpClient
+## ✨ Features
 
-Proxy configuration for API calls
+- Create, update, and delete tasks
+- Task statuses: **ToDo**, **InProgress**, **Done**
+- Status-based filtering
+- Dashboard summary
+- Overdue task indication
+- Reminder flag
+- Clean and responsive UI
 
-Backend
-
-ASP.NET Core Web API (.NET 7+)
-
-RESTful API design
-
-Dependency Injection
-
-SOLID principles
-
-Clean Architecture
-
-MongoDB.Driver
-
-Database
-
-MongoDB (Local / Atlas)
-
-Single collection: Tasks
-
-✨ Features
-Core Features
-
-Create a task with:
-
-Title
-
-Due date & time
-
-Reminder flag
-
-Default task status: ToDo
-
-Update task status:
-
-ToDo → InProgress → Done
-
-Delete tasks
-
-View all tasks grouped by status
-
-UI Features
-
-Status filter board (All / ToDo / InProgress / Done)
-
-Dashboard showing:
-
-Total tasks
-
-Completed tasks
-
-In-progress tasks
-
-Overdue task detection
-
-Reminder badge indicator
-
-Clean, responsive UI
-
-🧱 Project Structure
+---
+## 🧱 Project Structure
 TO-DO_ANGULAR
 │
 ├── backend/
-│   └── TaskManager.Api
-│       ├── Configuration/
-│       ├── Controllers/
-│       ├── Data/
-│       ├── Models/
-│       ├── Services/
-│       └── Program.cs
+│ └── TaskManager.Api
+│ ├── Configuration/
+│ ├── Controllers/
+│ ├── Data/
+│ ├── Models/
+│ ├── Services/
+│ └── Program.cs
 │
 ├── frontend/
-│   └── Task-manager-ui
-│       ├── src/app/
-│       │   ├── core/
-│       │   ├── features/
-│       │   └── app.routes.ts
-│       └── proxy.conf.json
+│ └── Task-manager-ui
+│ ├── src/app/
+│ │ ├── core/
+│ │ ├── features/
+│ │ └── app.routes.ts
+│ └── proxy.conf.json
 │
 └── README.md
 
-🔄 Backend Architecture Flow
-Client (Angular / Swagger)
-↓
-Controller (HTTP Layer)
-↓
-Service (Business Logic)
-↓
-Repository (Data Access)
-↓
-MongoDB
-↑
-JSON Response
 
-📦 Backend Folder Explanation
-Folder	Purpose
-Configuration	App settings (MongoDB config)
-Controllers	Handle HTTP requests
-Services	Business logic
-Data	Database access (Repository pattern)
-Models	Domain models & DTOs
-📦 Frontend Folder Explanation
-Folder	Purpose
-core	Services & models
-features	Task UI components
-app.routes.ts	Routing
-proxy.conf.json	API proxy
-🌐 REST API Endpoints
-Method	Endpoint	Description
-GET	/api/tasks	Get all tasks
-POST	/api/tasks	Create task
-PATCH	/api/tasks/{id}/status	Update status
-DELETE	/api/tasks/{id}	Delete task
-⚙️ Setup Instructions
-1️⃣ Backend Setup
+---
+
+## 📦 Backend Folder Explanation
+
+| Folder | Purpose |
+|------|--------|
+| Configuration | Application settings (MongoDB config) |
+| Controllers | Handle HTTP requests and responses |
+| Services | Business logic |
+| Data | Database access using repository pattern |
+| Models | Domain models & DTOs |
+
+---
+
+## 📦 Frontend Folder Explanation
+
+| Folder | Purpose |
+|------|--------|
+| core | Services and models |
+| features | Task-related UI components |
+| app.routes.ts | Application routing |
+| proxy.conf.json | API proxy configuration |
+
+---
+
+## 🌐 REST API Endpoints
+
+| Method | Endpoint | Description |
+|------|---------|-------------|
+| GET | `/api/tasks` | Get all tasks |
+| POST | `/api/tasks` | Create a task |
+| PATCH | `/api/tasks/{id}/status` | Update task status |
+| DELETE | `/api/tasks/{id}` | Delete a task |
+
+---
+## ⚙️ Setup & Run the Application
+
+Follow the steps below to run the **backend API** and **frontend UI** locally.
+
+---
+
+## 🔧 Backend Setup (ASP.NET Core)
+
+### Prerequisites
+- .NET SDK 7 or later
+- MongoDB (local or Atlas)
+
+---
+
+### 1️⃣ Navigate to backend
+```bash
 cd backend/TaskManager.Api
-dotnet restore
 dotnet run
 
+2️⃣ Configure MongoDB
 
-Backend runs on:
+Update appsettings.json:
 
-http://localhost:5214
-
-
-Swagger:
-
-http://localhost:5214/swagger
-
-2️⃣ Frontend Setup
-cd frontend/Task-manager-ui
-npm install
-ng serve --proxy-config proxy.conf.json
-
-
-Frontend runs on:
-
-http://localhost:4200
-
-🔐 Environment Configuration
-MongoDB (appsettings.json)
 "MongoSettings": {
   "ConnectionString": "mongodb://localhost:27017",
   "DatabaseName": "TaskManagerDb",
   "TasksCollectionName": "Tasks"
 }
 
-🧠 Key Concepts Used
 
-RESTful API
+Ensure MongoDB is running.
 
-DTOs (Data Transfer Objects)
+3️⃣ Run the backend
+dotnet restore
+dotnet run
 
-Repository Pattern
+4️⃣ Verify backend
 
-Dependency Injection
+API: http://localhost:5214
 
-SOLID Principles
+Swagger UI: http://localhost:5214/swagger
 
-CORS
+🎨 Frontend Setup (Angular)
+Prerequisites
 
-RxJS Observables
+Node.js (v18+ recommended)
 
-Angular Standalone Components
+Angular CLI
 
-Clean Architecture
+Install Angular CLI if not installed:
+
+npm install -g @angular/cli
+
+1️⃣ Navigate to frontend
+cd frontend/Task-manager-ui
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Start frontend (with API proxy)
+ng serve --proxy-config proxy.conf.json
+
+4️⃣ Access application
+http://localhost:4200
+
+
+The frontend uses a proxy configuration to communicate with the backend API during development.
+
+
+
+
