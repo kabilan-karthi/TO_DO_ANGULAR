@@ -1,0 +1,68 @@
+# =========================
+# .NET / Visual Studio
+# =========================
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code
+.vscode/
+.idea/
+
+# =========================
+# ASP.NET Core
+# =========================
+
+# Environment-specific settings
+appsettings.Development.json
+appsettings.Production.json
+
+# Logs
+*.log
+
+# =========================
+# OS files
+# =========================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+# =========================
+# Test / Coverage
+# =========================
+
+TestResults/
+coverage/
+*.coverage
+
+# =========================
+# NuGet
+# =========================
+
+# Packages (optional – normally restored)
+packages/
+*.nupkg
+*.snupkg
+
+# =========================
+# Misc
+# =========================
+
+# Backup files
+*.bak
+*.tmp
+*.temp
+
+# Dotnet tools
+.dotnet/
